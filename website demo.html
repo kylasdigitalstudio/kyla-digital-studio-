@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kyla Digital Studio</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; line-height: 1.6; background-color: #fdf5f7; color: #333; }
+
+  /* Hero Banner with Image + Overlay */
+  header { 
+    background: linear-gradient(rgba(233,30,99,0.6), rgba(255,128,171,0.6)), url('https://images.unsplash.com/photo-1581093588401-cd35be2e4305?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    color: white;
+    padding: 120px 20px 100px 20px;
+    text-align: center;
+    position: relative; 
+  }
+  header h1 { font-size: 3rem; margin-bottom: 15px; }
+  header p { font-size: 1.3rem; font-weight: 500; }
+
+  /* Sticky Navigation */
+  nav { 
+    position: sticky;
+    top: 0;
+    background: rgba(233,30,99,0.95);
+    padding: 15px 0;
+    display: flex; 
+    justify-content: center; 
+    gap: 30px; 
+    z-index: 100;
+    border-radius: 0 0 12px 12px;
+  }
+  nav a { 
+    color: white;
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 1rem; 
+    transition: color 0.2s, transform 0.2s; 
+  }
+  nav a:hover { 
+    color: #ffe6f0; 
+    transform: translateY(-2px);
+  }
+
+  /* Sections with divider */
+  section { 
+    padding: 60px 20px; 
+    max-width: 1000px; 
+    margin: 50px auto; 
+    border-radius: 12px; 
+    position: relative; 
+  }
+  section::before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 80px;
+    background-color: #e91e63;
+    margin: 0 auto 20px auto;
+    border-radius: 1px;
+  }
+
+  h2 { color: #e91e63; font-size: 2rem; margin-bottom: 25px; text-align: center; }
+
+  /* About Me */
+  .about { background-color: white; padding: 40px 30px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); margin-bottom: 50px; }
+  .about p { font-size: 1.1rem; line-height: 1.6; }
+
+  /* Services Section */
+  .services { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 50px; }
+  .service-card { 
+    background-color: white; 
+    padding: 25px 20px; 
+    border-radius: 12px; 
+    width: 260px; 
+    text-align: center; 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+  }
+  .service-card:hover { 
+    transform: translateY(-5px) scale(1.02); 
+    box-shadow: 0 12px 25px rgba(233,30,99,0.3); 
+  }
+  .service-card img { 
+    width: 50px; 
+    margin-bottom: 15px; 
+    transition: transform 0.3s, filter 0.3s; 
+  }
+  .service-card:hover img { 
+    transform: scale(1.2); 
+    filter: drop-shadow(0 0 10px #ff80ab); 
+  }
+  .service-card h3 { color: #e91e63; margin-bottom: 12px; font-size: 1.2rem; }
+  .service-card p { font-size: 1rem; }
+
+  /* Pricing Table */
+  #pricing { background-color: #ffe6f0; border-radius: 12px; }
+  .pricing-table { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 30px; justify-content: center; }
+  .pricing-card { 
+    background-color: white; 
+    padding: 25px 20px; 
+    border-radius: 12px; 
+    width: 260px; 
+    text-align: center; 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+  }
+  .pricing-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+  .pricing-card h3 { color: #e91e63; margin-bottom: 12px; font-size: 1.2rem; }
+  .pricing-card p { font-size: 1rem; margin-bottom: 15px; }
+  .pricing-card span { font-weight: bold; font-size: 1.2rem; }
+
+  /* Contact Box */
+  #contact { background-color: white; padding: 50px 30px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); margin-bottom: 50px; text-align: center; }
+  #contact p { font-size: 1.1rem; margin-bottom: 15px; }
+
+  /* Footer */
+  footer { text-align: center; padding: 30px 20px; font-size: 0.9rem; color: #555; background-color: #f7f7f7; border-top: 1px solid #e91e63; }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .services, .pricing-table {
+      flex-direction: column;
+      align-items: center;
+    }
+    .service-card, .pricing-card {
+      width: 90%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Kyla Digital Studio</h1>
+  <p>Professional, student-run web design with a personal touch</p>
+</header>
+
+<nav>
+  <a href="#about">About Me</a>
+  <a href="#services">Services</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about">
+    <p>Hello! I’m Kyla, a final-year Information Science student who excelled in first and second year. I’m passionate about helping small businesses create beautiful, professional websites. <strong>Kyla Digital Studio is student-run</strong>, so you get affordable, high-quality web solutions with a personal touch. I specialize in responsive design, clean layouts, and intuitive websites.</p>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Services</h2>
+  <div class="services">
+    <!-- Website Updates -->
+    <div class="service-card">
+      <img src="https://img.icons8.com/ios-filled/50/000000/edit.png" alt="Update Icon"/>
+      <h3>Website Updates</h3>
+      <p>Edit text, images, and fix mobile responsiveness on existing websites.</p>
+    </div>
+
+    <!-- Mini HTML Pages -->
+    <div class="service-card">
+      <img src="https://img.icons8.com/ios-filled/50/000000/document.png" alt="Mini Page Icon"/>
+      <h3>Mini HTML Pages</h3>
+      <p>1-page digital card or link-in-bio site for freelancers and small businesses.</p>
+    </div>
+
+    <!-- 1–3 Page Websites -->
+    <div class="service-card">
+      <img src="https://img.icons8.com/ios-filled/50/000000/laptop.png" alt="Full Site Icon"/>
+      <h3>1–3 Page Websites</h3>
+      <p>Full websites with Home, About, and Contact pages. Modern, mobile-friendly design.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2>Pricing</h2>
+  <div class="pricing-table">
+    <div class="pricing-card">
+      <h3>Website Update</h3>
+      <p>Text/image updates, mobile fixes, buttons</p>
+      <span>R200–R350 / hr</span>
+    </div>
+    <div class="pricing-card">
+      <h3>Mini HTML Page</h3>
+      <p>1-page digital card / link-in-bio site</p>
+      <span>R300–R700</span>
+    </div>
+    <div class="pricing-card">
+      <h3>1–3 Page Website</h3>
+      <p>Full small business website</p>
+      <span>R800–R2 500</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Interested in working together or need a website refresh?</p>
+  <p><strong>Email:</strong> <a href="mailto:kylavanvuuren13@gmail.com" style="color:#e91e63; text-decoration:none;">kylavanvuuren13@gmail.com</a></p>
+  <p><strong>WhatsApp:</strong> <a href="https://wa.me/27662711237" target="_blank" style="color:#e91e63; text-decoration:none;">066 271 1237</a></p>
+</section>
+
+<footer>
+  &copy; 2026 Kyla Digital Studio
+</footer>
+
+</body>
+</html>
