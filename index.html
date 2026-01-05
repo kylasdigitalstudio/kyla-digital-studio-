@@ -36,7 +36,7 @@
 
   /* Sections */
   section { padding: 60px 20px; max-width: 1000px; margin: 50px auto; border-radius: 12px; position: relative; }
-  section::before { content: ''; display: block; height: 2px; width: 80px; background-color: #e91e63; margin: 0 auto 20px auto; border-radius: 1px; }
+  section::before { content: '🎀'; display: block; text-align: center; font-size: 24px; color: #e91e63; margin-bottom: 20px; }
   h2 { color: #e91e63; font-size: 2rem; margin-bottom: 25px; text-align: center; }
 
   /* About Section */
@@ -61,6 +61,10 @@
   .pricing-card p { font-size: 1rem; margin-bottom: 15px; }
   .pricing-card span { font-weight: bold; font-size: 1.2rem; display: block; }
 
+  /* Domain & Hosting Section */
+  #hosting { background-color: #fff0f5; padding: 50px 30px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); margin-bottom: 50px; }
+  #hosting p { font-size: 1.1rem; line-height: 1.6; text-align:center; }
+
   /* Contact Section */
   #contact { background-color: white; padding: 50px 30px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); margin-bottom: 50px; text-align: center; }
   #contact p { font-size: 1.1rem; margin-bottom: 15px; }
@@ -79,7 +83,7 @@
 <body>
 
 <header>
-  <h1>Kyla Digital Studio</h1>
+  <h1>🎀 Kyla Digital Studio 🎀</h1>
   <p>Student-run web design, modern & mobile-friendly websites</p>
 </header>
 
@@ -87,6 +91,7 @@
   <a href="#about">About</a>
   <a href="#services">Services</a>
   <a href="#pricing">Pricing</a>
+  <a href="#hosting">Domain & Hosting</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -141,6 +146,14 @@
       <p>Editing existing websites, adding features, or making updates</p>
       <span>R200/hr</span>
     </div>
+  </div>
+</section>
+
+<section id="hosting">
+  <h2>Domain & Hosting</h2>
+  <div class="about">
+    <p>I can help you get a <strong>custom domain name</strong> (like yourbusiness.com) and set up <strong>secure hosting</strong> so your website is live online. I take care of everything from setup to launch, so you don’t have to worry about the technical details.</p>
+    <p>Pricing depends on the domain and hosting plan, and I’ll give a clear quote before starting.</p>
   </div>
 </section>
 
